@@ -1,0 +1,38 @@
+[
+	{
+		"username": "Deep",
+		"password": "12345678",
+		"email": "Deep@gmail.com",
+		"firstName": "Deep",
+		"lastName": "Mathur",
+		"userId": "102",
+		"ratedBooks": [],
+		"booksLiked": [],
+		"issuedBooks": [],
+		"logs": []
+	},
+	{
+		"username": "Deepak",
+		"password": "12345678",
+		"email": "Deepak.kumar@mindtre.com",
+		"firstName": "Deepak",
+		"lastName": "Kumar",
+		"userId": "101",
+		"ratedBooks": [],
+		"booksLiked": [],
+		"issuedBooks": [],
+		"logs": []
+	},
+	{
+		"username": "Dipesh",
+		"password": "12345678",
+		"email": "Dipesh@mindtre.com",
+		"firstName": "Dipesh",
+		"lastName": "chawla",
+		"userId": "103",
+		"ratedBooks": [],
+		"booksLiked": [],
+		"issuedBooks": [],
+		"logs": []
+	}
+]

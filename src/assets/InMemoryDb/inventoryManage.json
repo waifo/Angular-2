@@ -1,0 +1,10 @@
+[
+	{
+		"bookId": "XXX",
+		"totalPresent": "9",
+		"issued": "7",
+		"issuedTo": [
+		    "userIds"
+		 ]
+	}
+]

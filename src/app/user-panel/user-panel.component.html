@@ -1,0 +1,30 @@
+<div class="libPanel">
+    <nav class="row navbar navDark desktopPanel">
+      <div class="col-sm-8 col-xs-6">
+          <span class="adSpan">Hello, User</span>
+      </div>
+      <div class="col-sm-4 col-xs-6 text-right">
+          <span class="logOutBtn" (click)="logOut();">
+              <span class="logSpan glyphicon glyphicon-log-out"></span>
+              <span class="logSpan">Log Out</span>
+          </span>
+      </div>
+    </nav>
+    <div class="row btnPanel">
+        <div class="col-sm-4 col-xs-4">
+            <button [ngClass]="{'libBtn':true, 'libBtnActive':currentPanel==='user-profile'}" (click)="setCurrentPanel('user-profile');">Profile</button>
+        </div>
+        <div class="col-sm-4 col-xs-4">
+            <button [ngClass]="{'libBtn':true, 'libBtnActive':currentPanel==='book-detail'}" (click)="setCurrentPanel('book-detail');">Books In Library</button>
+        </div>
+        <div class="col-sm-4 col-xs-4">
+            <button [ngClass]="{'libBtn':true, 'libBtnActive':currentPanel==='book-logs'}" (click)="setCurrentPanel('book-logs');">Return Books</button>
+        </div>
+    </div>
+    <div [ngSwitch]="currentPanel">
+        <app-user-profile *ngSwitchCase="'user-profile'" [userData]="userPanelModel.user"></app-user-profile>
+        <app-book-detail-user *ngSwitchCase="'book-detail'" [bookData]="userPanelModel.booksData" [issuedBook]="issuedBook" [getBookPlace]="userPanelModel.issueMetadata"></app-book-detail-user>
+        <app-book-log *ngSwitchCase="'book-logs'" [bookData]="userPanelModel.booksData" [issuedBook]="issuedBook" [getBookPlace]="userPanelModel.issueMetadata" [logs]="logs"></app-book-log>
+        <app-user-profile *ngSwitchDefault [userData]="userPanelModel.user"></app-user-profile>
+    </div>
+</div>

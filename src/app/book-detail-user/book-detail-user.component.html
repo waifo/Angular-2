@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-sm-12 searchFilterPanel">
+            <div class="col-sm-3 col-sm-offset-6 col-xs-6">
+                <label>Search</label>
+                <input type="text" class="form-control" placeholder="search book by title or author" [(ngModel)]="searchVal">
+            </div>
+            <div class="col-sm-3 genreFilterOpt col-xs-6">
+                <label>Genre Filter</label>
+                <select class="form-control" [(ngModel)]="filterValue" >
+                    <option *ngFor="let filterVal of filterValueArray" [ngValue]="filterVal">{{filterVal}}</option>
+                </select>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-sm-12">
+            <app-book-detail-tile *ngFor="let book of bookData | filterData: [filterValue,searchVal]; let in = index" [bookData]="book" [issuedBook]="issuedBook" [getBookPlace]="getBookPlace"
+                [ind]="in"></app-book-detail-tile>
+        </div>    
+</div>
